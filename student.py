@@ -1,15 +1,13 @@
 class Student:
-    def __init__(self, roll_no, name, sem, course):
+    def __init__(self, roll_no, name, sem):
         self.roll_no = roll_no
         self.name = name
         self.sem = sem
-        self.course = course
 
     def display(self):
         print(f"Roll No: {self.roll_no}")
         print(f"Name: {self.name}")
         print(f"Sem: {self.sem}")
-        print(f"Course: {self.course}")
         print("-" * 30)
 
 # Function to input student details
@@ -21,8 +19,7 @@ def input_students():
         roll_no = input("Roll No: ")
         name = input("Name: ")
         sem = input("sem: ")
-        course = input("Course: ")
-        students.append(Student(roll_no, name, sem, course))
+        students.append(Student(roll_no, name, sem))
     return students
 
 # Main program
